@@ -5,6 +5,7 @@
         static void Open()
         {
             string data;
+            int k1;
             int[,] dBTable = new int[2,78];
             string tempo = "a";
             string tempo2 = "b";
