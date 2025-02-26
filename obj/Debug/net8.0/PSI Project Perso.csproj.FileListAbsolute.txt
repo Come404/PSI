@@ -1,0 +1,15 @@
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0\PSI Project Perso.exe
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0\PSI Project Perso.deps.json
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0\PSI Project Perso.runtimeconfig.json
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0\PSI Project Perso.dll
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0\PSI Project Perso.pdb
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.AssemblyInfoInputs.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.AssemblyInfo.cs
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.csproj.CoreCompileInputs.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.sourcelink.json
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.dll
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\refint\PSI Project Perso.dll
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.pdb
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\PSI Project Perso.genruntimeconfig.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0\ref\PSI Project Perso.dll

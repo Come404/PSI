@@ -1,50 +1,30 @@
-﻿namespace PSI1
+﻿using PSI_Project_Perso;
+
+namespace PSI1
 {
     class Program
     {
-        static void Open()
+        static int[,] Open()
         {
             string data;
-            int k1;
-            int[,] dBTable = new int[2,78];
-            string tempo = "a";
-            string tempo2 = "b";
-            string tempo3 = "9";
-            string autreCote = "";
-            int panique = 0;
+            int[,] dBTable = new int[2, 78]; // [0,...] : le noeud || [1,...] : le noeud relié à celui-ci
             int indice = 0;
             StreamReader sr = null;
             try
             {
-                sr = new StreamReader("C:\\Users\\comew\\source\\repos\\PSI Project Perso\\PSI Project Perso\\soc-karate.mtx");
+                //standard pour lire un fichier ligne par ligne; ici les chiffres commencent à la 1ere ligne
+                sr = new StreamReader("C:/Users/comew/OneDrive/Documents/GitHub/PSI/soc-karate.mtx");
                 data = sr.ReadLine();
                 while (data != null)
                 {
-                    
                     if (data == null)
                         continue;
-                    tempo = Convert.ToString(data[0]);
-                    if (data[1] == ' ')
-                        panique++;
-                    else
-                        tempo2 = Convert.ToString(data[1]);
-                    if(tempo2 != "b")
-                        tempo3 = tempo + tempo2;
-                    else
-                        tempo3 = tempo;
 
-                    if (data[2] == ' ')
-                        autreCote = Convert.ToString(data[3]);
-                    else
-                        autreCote = Convert.ToString(data[2]);
-                    dBTable[0,indice] = Convert.ToInt32(tempo3);
-                    dBTable[1,indice] = Convert.ToInt32(autreCote);
+                    int[] numbers = data.Split(' ').Select(int.Parse).ToArray();
+                    dBTable[0, indice] = numbers[0]; // First number in the first row
+                    dBTable[1, indice] = numbers[1]; // Second number in the second row
                     indice++;
                     data = sr.ReadLine();
-
-                    tempo = "a";
-                    tempo2 = "b";
-                    tempo3 = "9";
                 }
             }
             catch (IOException e)
@@ -55,23 +35,49 @@
             {
                 sr.Close();
             }
+
             AfficherMat(dBTable);
             Console.WriteLine(dBTable.GetLength(1));
+            return dBTable;
         }
         static void AfficherMat(int[,] matrix)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                for(int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    Console.Write(matrix[i,j]+"; ");
-                }
+                Console.Write(matrix[0, j] + " ");
+                Console.Write(matrix[1, j]);
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
+        static void Ajuster(int[,] matrice)
+        {
+            Noeud[] joueurs = new Noeud[34];
+            for (int j = 0; j < matrice.GetLength(0); j++)
+            {
+                joueurs[j] = new Noeud(matrice[0, j]);
+                joueurs[j].Rajouter(matrice[1, j]);
+                Console.WriteLine(joueurs[j].Voisins[0]);
+            }
+        }
+        /* //Pour compter le nombre d'occurences, pour l'instant pas d'utilité
+        static int NbOccurences(int[,] matrix)
+        {
+            int occ = 0;
+            int[] tab = new int[78];
+            for (int i = 0; i< matrix.GetLength(1); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[0, j] == matrix[0,i])
+                        tab[i] = tab[i]+1;
+                }
+            }
+            return occ;
+        }*/
         static void Main(string[] args)
         {
-            Open();
+            Ajuster(Open());
         }
     }
 }
