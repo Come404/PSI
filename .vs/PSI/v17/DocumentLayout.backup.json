@@ -59,8 +59,7 @@
               "RelativeToolTip": "Graphe.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T12:15:59.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T12:15:59.171Z"
             },
             {
               "$type": "Document",
@@ -68,9 +67,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T20:48:56.763Z",
               "EditorCaption": ""
@@ -85,8 +84,7 @@
               "RelativeToolTip": "bin\\Debug\\net8.0\\soc-karate.mtx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001794|",
-              "WhenOpened": "2025-02-27T13:23:56.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T13:23:56.702Z"
             },
             {
               "$type": "Document",
@@ -98,8 +96,7 @@
               "RelativeToolTip": "Noeud.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T20:06:40.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T20:06:40.729Z"
             }
           ]
         }
