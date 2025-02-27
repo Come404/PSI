@@ -92,6 +92,7 @@ using System.Linq;
 using System;
 using PSI_Project_Perso;
 
+
 namespace PSI1
 {
     class Program
@@ -99,11 +100,17 @@ namespace PSI1
         static void Main()
         {
             int[,] adjMatrix = GenererMatriceAdjacence(Open(), 34);
+
             Graphe graph = new Graphe(adjMatrix);
 
-            Console.WriteLine("Exécution de DFS:");
+            PrintMatrix(adjMatrix);
+            Console.WriteLine("\n Graph est non-orienté ? " + (EstNonOriente(adjMatrix) ? "Oui" : "Non"));
+
+            Console.WriteLine("\nExécution de DFS:");
             graph.DFS_Main();
+            
             graph.PrintDFSResults();
+
             Console.WriteLine("\n Graph est connecté ? " + (graph.IsConnected() ? "Oui" : "Non"));
             Console.WriteLine("\n Le graph contient un cycle ? " + (graph.HasCycle() ? "Oui" : "Non"));
             Console.WriteLine("\n Nombre de composants connexes: " + graph.ConnectedComponents());
@@ -111,6 +118,7 @@ namespace PSI1
             Console.WriteLine("\n Exécution de BFS depuis le sommet 1:");
             graph.BFS(1);
             graph.PrintBFSResults();
+            
         }
 
         static int[,] Open()
@@ -145,6 +153,45 @@ namespace PSI1
             }
 
             return adjMatrix;
+
         }
+
+
+        static void PrintMatrix(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+
+            Console.WriteLine("Adjacency Matrix:");
+            for (int i = 1; i < rows; i++)  // 从 1 开始，避免 0 索引的额外行
+            {
+                for (int j = 1; j < cols; j++)
+                {
+                    Console.Write(matrix[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+       
+
+        public static bool EstNonOriente(int[,] matrix)
+        {
+            int size = matrix.GetLength(0);
+            for (int i = 1; i < size; i++)
+            {
+                for (int j = 1; j < size; j++)
+                {
+                    if (matrix[i, j] != matrix[j, i])
+                    {
+                        return false; // 非对称，说明是有向图
+                    }
+                }
+            }
+            return true; // 对称，说明是无向图
+        }
+
     }
 }
+
+
+// 测试代码

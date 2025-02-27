@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\lien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:lien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Graphe.cs",
+              "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Graphe.cs",
+              "RelativeDocumentMoniker": "Graphe.cs",
+              "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Graphe.cs",
+              "RelativeToolTip": "Graphe.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAQwK4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T10:44:18.776Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Lien.cs",
               "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Lien.cs",
               "RelativeDocumentMoniker": "Lien.cs",
               "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Lien.cs",
               "RelativeToolTip": "Lien.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T11:04:22.051Z",
               "EditorCaption": ""
@@ -48,38 +61,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Graphe.cs",
-              "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Graphe.cs",
-              "RelativeDocumentMoniker": "Graphe.cs",
-              "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Graphe.cs*",
-              "RelativeToolTip": "Graphe.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T10:44:18.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAowGUAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwGIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T20:48:56.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Noeud.cs",
               "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Noeud.cs",
               "RelativeDocumentMoniker": "Noeud.cs",
               "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Noeud.cs",
               "RelativeToolTip": "Noeud.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvx0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T20:06:40.729Z",
               "EditorCaption": ""
