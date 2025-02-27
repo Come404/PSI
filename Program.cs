@@ -8,7 +8,7 @@
             int[,] dBTable = new int[2,78];
             string tempo = "a";
             string tempo2 = "b";
-            string tempo3 = "9";
+            string tempo3 = "9"; //freifor
             string autreCote = "";
             int panique = 0;
             int indice = 0;

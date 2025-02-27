@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PSI Project Perso")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff557082e6041b839db782440f7c2d40270e7251")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+750fba8ced03c54e147446258db227f85b7bcf89")]
 [assembly: System.Reflection.AssemblyProductAttribute("PSI Project Perso")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PSI Project Perso")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
