@@ -110,14 +110,15 @@ namespace PSI1
             graph.DFS_Main();
             
             graph.PrintDFSResults();
-
+            /*
             Console.WriteLine("\n Graph est connecté ? " + (graph.IsConnected() ? "Oui" : "Non"));
             Console.WriteLine("\n Le graph contient un cycle ? " + (graph.HasCycle() ? "Oui" : "Non"));
             Console.WriteLine("\n Nombre de composants connexes: " + graph.ConnectedComponents());
-
+            
             Console.WriteLine("\n Exécution de BFS depuis le sommet 1:");
             graph.BFS(1);
-            graph.PrintBFSResults();
+            graph.PrintBFSResults();*/
+            
             
         }
 
