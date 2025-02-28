@@ -1,95 +1,192 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-
-class Graphe
+namespace PSI_Project_Perso
 {
-    private int[,] adjMatrix;
-    private int nbNoeuds;
-
-    // 用于 DFS 的数据
-    private Dictionary<int, string> couleurDFS;
-    private Dictionary<int, int?> predDFS;
-    private Dictionary<int, int> dateDecDFS;
-    private Dictionary<int, int> dateFinDFS;
-    private int timeDFS;
-    private List<int> dfsOrder;
-    private bool contientCycle;
-    private int connectedComponents;
-
-    public Graphe(int[,] matrix)
+    class Graphe
     {
-        adjMatrix = matrix;
-        nbNoeuds = matrix.GetLength(0);
-        couleurDFS = new Dictionary<int, string>();
-        predDFS = new Dictionary<int, int?>();
-        dateDecDFS = new Dictionary<int, int>();
-        dateFinDFS = new Dictionary<int, int>();
-        dfsOrder = new List<int>();
-        contientCycle = false;
-        connectedComponents = 0;
-    }
+        private int[,] Matrice_Adj;
+        private List<Noeud> noeuds;
+        private bool contientCycle;
+        private List<Lien> liens;
 
-    // 1. DFS 遍历（带访问顺序 & 环检测）
-    public void DFS_Main()
-    {
-        for (int i = 1; i < nbNoeuds; i++)
+        public bool ContientCycle
         {
-            couleurDFS[i] = "blanc";
-            predDFS[i] = null;
-            dateDecDFS[i] = int.MaxValue;
-            dateFinDFS[i] = int.MaxValue;
+            get { return contientCycle; }
         }
 
-        timeDFS = 1;
-        dfsOrder.Clear();
-        contientCycle = false;
-        connectedComponents = 0;
-
-        for (int i = 1; i < nbNoeuds; i++)
+        public Graphe(List<(int, int)> edges)
         {
-            if (couleurDFS[i] == "blanc")
+            int nbNoeuds = 0;
+            for (int i = 0; i < edges.Count; i++)
             {
-                connectedComponents++;  // 发现一个新的连通分量
-                timeDFS = DFS_Rec(i, timeDFS);
-            }
-        }
-    }
+                int node1 = edges[i].Item1;
+                int node2 = edges[i].Item2;
 
-    private int DFS_Rec(int s, int date)
-    {
-        couleurDFS[s] = "jaune";  // 访问中
-        dateDecDFS[s] = date;
-        date++;
-        dfsOrder.Add(s);
-
-        for (int v = 1; v < nbNoeuds; v++)
-        {
-            if (adjMatrix[s, v] == 1)
-            {
-                if (couleurDFS[v] == "blanc") // 未访问，递归
+                if (node1 > nbNoeuds)
                 {
-                    predDFS[v] = s;
-                    date = DFS_Rec(v, date);
+                    nbNoeuds = node1;
+                }
+                if (node2 > nbNoeuds)
+                {
+                    nbNoeuds = node2;
                 }
             }
+
+            Matrice_Adj = new int[nbNoeuds + 1, nbNoeuds + 1];
+            noeuds = new List<Noeud>();
+            liens = new List<Lien>();
+
+            for (int i = 0; i <= nbNoeuds; i++)
+            {
+                noeuds.Add(new Noeud(i));
+            }
+
+            for (int i = 0; i < edges.Count; i++)
+            {
+                int noeud1 = edges[i].Item1;
+                int noeud2 = edges[i].Item2;
+
+                Matrice_Adj[noeud1, noeud2] = 1;
+                Matrice_Adj[noeud2, noeud1] = 1;
+
+                // Relation de voisin
+                noeuds[noeud1].Rajouter(noeud2);
+                noeuds[noeud2].Rajouter(noeud1);
+
+                liens.Add(new Lien(noeuds[noeud1], noeuds[noeud2]));
+            }
+
         }
 
-        couleurDFS[s] = "rouge";  // 访问完成
-        dateFinDFS[s] = date;
-        date++;
-        return date;
-    }
-
-    public void PrintDFSResults()
-    {
-        Console.WriteLine("Noeud  | Début | Fin   | Prédécesseur");
-        Console.WriteLine("-----------------------------------");
-        for (int i = 1; i < nbNoeuds; i++)
+        public void PrintAdjMatrix()
         {
-            Console.WriteLine($"{i,-6} | {dateDecDFS[i],-5} | {dateFinDFS[i],-5} | {predDFS[i]?.ToString() ?? "-1",-12}");
+            Console.WriteLine("\nMatrice d'adjacence:");
+            for (int i = 1; i < Matrice_Adj.GetLength(0); i++)
+            {
+                for (int j = 1; j < Matrice_Adj.GetLength(1); j++)
+                {
+                    Console.Write(Matrice_Adj[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
-        Console.WriteLine("\n Ordre de visite (DFS) : " + string.Join(" - ", dfsOrder));
+
+        public bool EstNonOriente()
+        {
+            for (int i = 1; i < Matrice_Adj.GetLength(0); i++)
+            {
+                for (int j = 1; j < Matrice_Adj.GetLength(1); j++)
+                {
+                    if (Matrice_Adj[i, j] != Matrice_Adj[j, i])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public void DFS_Main()
+        {
+            int connectedComponents = 0;
+            List<int> dfsOrder = new List<int>();
+
+            foreach (Noeud noeud in noeuds)
+            {
+                noeud.Couleur = "blanc";
+            }
+
+            foreach (Noeud noeud in noeuds)
+            {
+                if (noeud.Id > 0 && noeud.Couleur == "blanc")
+                {
+                    connectedComponents++;
+                    DFS_Rec(noeud, dfsOrder, ref contientCycle);
+                }
+            }
+
+            Console.WriteLine("\nNombre de composants connexes: " + connectedComponents);
+
+            if (connectedComponents == 1)
+                Console.WriteLine("\nLe graphe est connexe.\n");
+            else
+                Console.WriteLine("\nLe graphe n'est pas connexe.\n");
+
+
+            Console.WriteLine("\nOrdre de visite (DFS) : " + string.Join(" -> ", dfsOrder));
+        }
+
+        private void DFS_Rec(Noeud noeud, List<int> dfsOrder, ref bool contientCycle)
+        {
+            dfsOrder.Add(noeud.Id);
+            noeud.Couleur = "jaune";
+
+            foreach (int voisinId in noeud.Voisins)
+            {
+                Noeud voisin = noeuds[voisinId];
+                if (voisin.Couleur == "blanc")
+                {
+                    DFS_Rec(voisin, dfsOrder, ref contientCycle);
+                }
+                else if (voisin.Couleur == "jaune")
+                {
+                    contientCycle = true;
+                }
+            }
+            noeud.Couleur = "rouge";
+        }
+
+        public List<int> BFS(int origine)
+        {
+            Queue<int> aTraiter = new Queue<int>();
+            List<int> bfsOrder = new List<int>();
+
+            foreach (Noeud noeud in noeuds)
+            {
+                noeud.Couleur = "blanc";
+                noeud.Pred = null;
+            }
+
+            noeuds[origine].Couleur = "jaune";
+            aTraiter.Enqueue(origine);
+
+            while (aTraiter.Count > 0)
+            {
+                int n = aTraiter.Dequeue();
+                bfsOrder.Add(n);
+
+                foreach (int voisinId in noeuds[n].Voisins)
+                {
+                    Noeud voisin = noeuds[voisinId];
+                    if (voisin.Couleur == "blanc")
+                    {
+                        voisin.Couleur = "jaune";
+                        voisin.Pred = n;
+                        aTraiter.Enqueue(voisinId);
+                    }
+                }
+                noeuds[n].Couleur = "rouge";
+            }
+            return bfsOrder;
+        }
+
+        public void PrintBFSOrder(List<int> bfsOrder)
+        {
+            Console.Write("\nOrdre de visite (BFS) : " + string.Join(" -> ", bfsOrder));
+            Console.WriteLine();
+        }
+
+        public int TailleDeGraphe()
+        {
+            return liens.Count;
+        }
+
+        public int OrdreDeGraphe()
+        {
+            return noeuds.Count - 1;
+        }
+
     }
 }
+
 
