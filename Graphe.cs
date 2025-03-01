@@ -8,7 +8,7 @@ using System.Linq;
 /*
 namespace PSI_Project_Perso
 {
-    class Graphe
+    public class Graphe
     {
         private int[,] adjMatrix;
         private int nbNoeuds;
@@ -40,7 +40,55 @@ namespace PSI_Project_Perso
         // 1. DFS 遍历（带访问顺序 & 环检测）
         public void DFS_Main()
         {
+<<<<<<< Updated upstream
             foreach (var i in Enumerable.Range(1, nbNoeuds - 1))
+=======
+            int nbNoeuds = 0;
+
+            // Find the highest node ID in edges
+            foreach (var edge in edges)
+            {
+                nbNoeuds = Math.Max(nbNoeuds, Math.Max(edge.Item1, edge.Item2));
+            }
+
+            Matrice_Adj = new int[nbNoeuds + 1, nbNoeuds + 1];
+
+
+            noeuds = new List<Noeud>();
+
+            // Fill the list with non-null nodes from 0 to nbNoeuds
+            for (int i = 0; i <= nbNoeuds; i++)
+            {
+                noeuds.Add(new Noeud(i));
+            }
+
+
+            liens = new List<Lien>();
+
+            // Create nodes
+            for (int i = 1; i <= nbNoeuds; i++) // Start from 1 to avoid Node 0 issue
+            {
+                noeuds[i] = new Noeud(i); // Avoid "Index out of range"
+            }
+
+            // Create edges
+            foreach (var (noeud1, noeud2) in edges)
+            {
+                // Ensure nodes exist before using them
+                if (noeud1 >= noeuds.Count) noeuds.Add(new Noeud(noeud1));
+                if (noeud2 >= noeuds.Count) noeuds.Add(new Noeud(noeud2));
+
+                Matrice_Adj[noeud1, noeud2] = 1;
+                Matrice_Adj[noeud2, noeud1] = 1;
+
+                noeuds[noeud1].Rajouter(noeud2);
+                noeuds[noeud2].Rajouter(noeud1);
+
+                liens.Add(new Lien(noeuds[noeud1], noeuds[noeud2]));
+            }
+            /*int nbNoeuds = 0;
+            for (int i = 0; i < edges.Count; i++)
+>>>>>>> Stashed changes
             {
                 couleur[i] = "blanc";
                 pred[i] = null;
@@ -53,9 +101,40 @@ namespace PSI_Project_Perso
             hasCycle = false;
             connectedComponents = 0;
 
+<<<<<<< Updated upstream
             foreach (var i in Enumerable.Range(1, nbNoeuds - 1))
             {
                 if (couleur[i] == "blanc")
+=======
+            for (int i = 1; i <= nbNoeuds; i++)
+            {
+                noeuds.Add(new Noeud(i));
+            }
+
+            for (int i = 0; i < edges.Count; i++)
+            {
+                int noeud1 = edges[i].Item1;
+                int noeud2 = edges[i].Item2;
+
+                Matrice_Adj[noeud1, noeud2] = 1;
+                Matrice_Adj[noeud2, noeud1] = 1;
+
+                // Relation de voisin
+                noeuds[noeud1].Rajouter(noeud2);
+                noeuds[noeud2].Rajouter(noeud1);
+
+                liens.Add(new Lien(noeuds[noeud1], noeuds[noeud2]));
+            }*/
+
+        }
+
+        public void PrintAdjMatrix()
+        {
+            Console.WriteLine("\nMatrice d'adjacence:");
+            for (int i = 1; i < Matrice_Adj.GetLength(0); i++)
+            {
+                for (int j = 1; j < Matrice_Adj.GetLength(1); j++)
+>>>>>>> Stashed changes
                 {
                     connectedComponents++;  // 发现一个新的连通分量
                     DFS_Rec(i, -1);
@@ -94,7 +173,12 @@ namespace PSI_Project_Perso
             Console.WriteLine("Noeud | Début | Fin | Prédécesseur");
             foreach (var i in Enumerable.Range(1, nbNoeuds - 1))
             {
+<<<<<<< Updated upstream
                 Console.WriteLine($"{i} | {dateDec[i]} | {dateFin[i]} | {pred[i] ?? -1}");
+=======
+                if (noeud != null)
+                    noeud.Couleur = "blanc";  // ✅ Avoids null exception
+>>>>>>> Stashed changes
             }
             Console.WriteLine("\nOrdre de visite (DFS) : " + string.Join(" -> ", dfsOrder));
         }
@@ -155,11 +239,21 @@ namespace PSI_Project_Perso
         {
             return hasCycle;
         }
+        internal List<Noeud> GetNoeuds()
+        {
+            return noeuds;
+        }
 
+<<<<<<< Updated upstream
         //  5. 计算连通分量个数
         public int ConnectedComponents()
         {
             return connectedComponents;
+=======
+        internal List<Lien> GetLiens()
+        {
+            return liens;
+>>>>>>> Stashed changes
         }
     }
 }

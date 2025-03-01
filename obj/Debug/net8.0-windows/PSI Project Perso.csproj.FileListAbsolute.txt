@@ -1,0 +1,17 @@
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0-windows\PSI Project Perso.exe
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0-windows\PSI Project Perso.deps.json
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0-windows\PSI Project Perso.runtimeconfig.json
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0-windows\PSI Project Perso.dll
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\bin\Debug\net8.0-windows\PSI Project Perso.pdb
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI_Project_Perso.GraphForm.resources
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.csproj.GenerateResource.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.AssemblyInfoInputs.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.AssemblyInfo.cs
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.csproj.CoreCompileInputs.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.sourcelink.json
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.dll
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\refint\PSI Project Perso.dll
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.pdb
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\PSI Project Perso.genruntimeconfig.cache
+C:\Users\comew\OneDrive\Documents\GitHub\PSI\obj\Debug\net8.0-windows\ref\PSI Project Perso.dll

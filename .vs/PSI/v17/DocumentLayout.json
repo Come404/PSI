@@ -1,22 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\",
+  "WorkspaceRootPath": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\comew\\onedrive\\documents\\github\\psi\\graph form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:graph form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\comew\\onedrive\\documents\\github\\psi\\graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:graphe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\lien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:lien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\xuanqi\\documents\\github\\psi\\noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\comew\\onedrive\\documents\\github\\psi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\comew\\onedrive\\documents\\github\\psi\\psi project perso.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:psi project perso.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\graph form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:graph form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\comew\\onedrive\\documents\\github\\psi\\noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:noeud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|c:\\users\\comew\\onedrive\\documents\\github\\psi\\lien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576221AB-A018-9E6C-04A1-6B1531DA2EE2}|PSI Project Perso.csproj|solutionrelative:lien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,25 +52,87 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
+<<<<<<< Updated upstream
+=======
+              "DocumentIndex": 6,
+              "Title": "Graph Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Graph Form.cs",
+              "RelativeDocumentMoniker": "Graph Form.cs",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Graph Form.cs [Design]",
+              "RelativeToolTip": "Graph Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T20:29:45.423Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PSI Project Perso.csproj",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\PSI Project Perso.csproj",
+              "RelativeDocumentMoniker": "PSI Project Perso.csproj",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\PSI Project Perso.csproj",
+              "RelativeToolTip": "PSI Project Perso.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-01T19:14:29.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Graph Form.cs",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Graph Form.cs",
+              "RelativeDocumentMoniker": "Graph Form.cs",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Graph Form.cs",
+              "RelativeToolTip": "Graph Form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T19:14:47.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+>>>>>>> Stashed changes
               "DocumentIndex": 1,
               "Title": "Graphe.cs",
-              "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Graphe.cs",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Graphe.cs",
               "RelativeDocumentMoniker": "Graphe.cs",
-              "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Graphe.cs",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Graphe.cs",
               "RelativeToolTip": "Graphe.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAANYAAAAAAAAAAAAQwK4AAAAdAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCAAAAAZAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T10:44:18.776Z",
               "EditorCaption": ""
             },
             {
+<<<<<<< Updated upstream
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+=======
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwCgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T20:48:56.763Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< Updated upstream
               "Title": "Lien.cs",
               "DocumentMoniker": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Lien.cs",
               "RelativeDocumentMoniker": "Lien.cs",
@@ -80,9 +165,52 @@
               "ToolTip": "C:\\Users\\Xuanqi\\Documents\\GitHub\\PSI\\Noeud.cs",
               "RelativeToolTip": "Noeud.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+=======
+              "Title": "Microsoft.NET.Sdk.DefaultItems.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAawJMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-03-01T20:45:00.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAawAkBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-03-01T20:48:14.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Lien.cs",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Lien.cs",
+              "RelativeDocumentMoniker": "Lien.cs",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Lien.cs",
+              "RelativeToolTip": "Lien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T20:06:40.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T11:04:22.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Noeud.cs",
+              "DocumentMoniker": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Noeud.cs",
+              "RelativeDocumentMoniker": "Noeud.cs",
+              "ToolTip": "C:\\Users\\comew\\OneDrive\\Documents\\GitHub\\PSI\\Noeud.cs",
+              "RelativeToolTip": "Noeud.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:06:40.729Z"
             }
           ]
         }

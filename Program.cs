@@ -111,6 +111,7 @@ namespace PSI1
             
             graph.PrintDFSResults();
 
+<<<<<<< Updated upstream
             Console.WriteLine("\n Graph est connecté ? " + (graph.IsConnected() ? "Oui" : "Non"));
             Console.WriteLine("\n Le graph contient un cycle ? " + (graph.HasCycle() ? "Oui" : "Non"));
             Console.WriteLine("\n Nombre de composants connexes: " + graph.ConnectedComponents());
@@ -126,6 +127,27 @@ namespace PSI1
             int[,] dBTable = new int[2, 78];
             int indice = 0;
             using (StreamReader sr = new StreamReader("soc-karate.mtx"))
+=======
+            // 执行 BFS 并输出访问顺序
+            Console.WriteLine("\nExécution de BFS depuis le sommet 1:");
+            List<int> bfsOrder = graph.BFS(1);
+            graph.PrintBFSOrder(bfsOrder);
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            
+            Application.Run(new GraphForm(graph));
+        }
+
+        /// <summary>
+        /// 读取数据文件并转换为边的列表 ez
+        /// </summary>
+        static List<(int, int)> ReadEdgesFromFile(string filePath)
+        {
+            List<(int, int)> edges = new List<(int, int)>();
+            
+            using (StreamReader sr = new StreamReader(filePath))
+>>>>>>> Stashed changes
             {
                 string data;
                 while ((data = sr.ReadLine()) != null)

@@ -10,14 +10,20 @@ namespace PSI_Project_Perso
         public int DateDec;      // 发现时间
         public int DateFin;      // 完成时间
 
+        public int X { get; set; }
+        public int Y { get; set; }
+
         public Noeud(int id)
         {
+            Random rnd = new Random();
             Id = id;
             Voisins = new List<int>();
             Couleur = "blanc";
             Pred = null;
             DateDec = int.MaxValue;
             DateFin = int.MaxValue;
+            X = rnd.Next(50, 350); 
+            Y = rnd.Next(50, 350);
         }
 
         public void Rajouter(int voisin)
