@@ -1,76 +1,62 @@
-﻿namespace PSI1
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace PSI_Project_Perso
 {
     class Program
     {
-        static void Open()
+        static void Main()
         {
-            string data;
-            int[,] dBTable = new int[2,78];
-            string tempo = "a";
-            string tempo2 = "b";
-            string tempo3 = "9";
-            string autreCote = "";
-            int panique = 0;
-            int indice = 0;
-            StreamReader sr = null;
-            try
-            {
-                sr = new StreamReader("C:\\Users\\comew\\source\\repos\\PSI Project Perso\\PSI Project Perso\\soc-karate.mtx");
-                data = sr.ReadLine();
-                while (data != null)
-                {
-                    
-                    if (data == null)
-                        continue;
-                    tempo = Convert.ToString(data[0]);
-                    if (data[1] == ' ')
-                        panique++;
-                    else
-                        tempo2 = Convert.ToString(data[1]);
-                    if(tempo2 != "b")
-                        tempo3 = tempo + tempo2;
-                    else
-                        tempo3 = tempo;
+            // Lecture des données du graphe à partir d'un fichier et création du graphed
+            List<(int, int)> edges = ReadEdgesFromFile("soc-karate.mtx");
+            Graphe graph = new Graphe(edges);
+            // Affichage de l'ordre et de la taille du graphe
+            Console.WriteLine("\nOrdre de graphe (le nombre de sommets qu'il contient) =  " + graph.OrdreDeGraphe());
+            Console.WriteLine("\nTaille de graphe (le nombre d'arêtes du graphe) =  " + graph.TailleDeGraphe());
 
-                    if (data[2] == ' ')
-                        autreCote = Convert.ToString(data[3]);
-                    else
-                        autreCote = Convert.ToString(data[2]);
-                    dBTable[0,indice] = Convert.ToInt32(tempo3);
-                    dBTable[1,indice] = Convert.ToInt32(autreCote);
-                    indice++;
-                    data = sr.ReadLine();
+            // Affichage de la matrice d'adjacence du graphe 
+            graph.PrintAdjMatrix();
+            Console.WriteLine("\nGraph est non-orienté ? " + (graph.EstNonOriente() ? "Oui" : "Non"));
 
-                    tempo = "a";
-                    tempo2 = "b";
-                    tempo3 = "9";
-                }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                sr.Close();
-            }
-            AfficherMat(dBTable);
-            Console.WriteLine(dBTable.GetLength(1));
+            // Exécution de l'algorithme de parcours en profondeur (DFS)
+            Console.WriteLine("\nExécution de DFS:");
+            graph.DFS_Main();
+            Console.WriteLine(graph.ContientCycle ? "Le graphe contient un cycle." : "Le graphe ne contient pas de cycle.");
+
+            // Exécution de l'algorithme de parcours en largeur (BFS) depuis le sommet 1
+            Console.WriteLine("\nExécution de BFS depuis le sommet 1:");
+            List<int> bfsOrder = graph.BFS(1);
+            graph.PrintBFSOrder(bfsOrder);
+
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.Run(new GraphForm(graph));
         }
-        static void AfficherMat(int[,] matrix)
+
+        /// <summary>
+        /// Lit un fichier contenant les arêtes du graphe et retourne une liste de paires de sommets.
+        /// </summary>
+        /// <param name="filePath">Chemin du fichier contenant les données du graphe.</param>
+        /// <returns>Liste des arêtes du graphe.</returns>
+        static List<(int, int)> ReadEdgesFromFile(string filePath)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            List<(int, int)> edges = new List<(int, int)>();
+
+            using (StreamReader sr = new StreamReader(filePath))
             {
-                for(int j = 0; j < matrix.GetLength(1); j++)
+                string data;
+#pragma warning disable CS8600 // Désactivation de l'avertissement de conversion de null
+                while ((data = sr.ReadLine()) != null)
                 {
-                    Console.Write(matrix[i,j]+"; ");
+                    int[] numbers = data.Split(' ').Select(int.Parse).ToArray();
+                    edges.Add((numbers[0], numbers[1]));
                 }
-                Console.WriteLine();
+#pragma warning restore CS8600 // Réactivation de l'avertissement de conversion de null
             }
-        }
-        static void Main(string[] args)
-        {
-            Open();
+            return edges;
         }
     }
 }
