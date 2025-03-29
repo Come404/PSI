@@ -18,7 +18,7 @@ namespace PSI_Project_Perso
             Console.WriteLine("\nTaille de graphe (le nombre d'arêtes du graphe) =  " + graph.TailleDeGraphe());
 
             // imprimer la matrice d'adjacence
-            graph.PrintAdjMatrix();
+            graph.AfficherMatrice();
             Console.WriteLine("\nGraph est non-orienté ? " + (graph.EstNonOriente() ? "Oui" : "Non"));
 
             // executer le DFS et avoir le resultat
@@ -29,7 +29,7 @@ namespace PSI_Project_Perso
             // executer le BFS, obtenir l'ordre de visite
             Console.WriteLine("\nExécution de BFS depuis le sommet 1:");
             List<int> bfsOrder = graph.BFS(1);
-            graph.PrintBFSOrder(bfsOrder);
+            graph.AfficherBFSOrder(bfsOrder);
         }
 
         /// <summary>

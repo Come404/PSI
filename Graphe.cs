@@ -4,7 +4,7 @@ namespace PSI_Project_Perso
 {
     class Graphe
     {
-        private int[,] Matrice_Adj;
+        private int[,] MatriceAdj;
         private List<Noeud> noeuds;
         private bool contientCycle;
         private List<Lien> liens;
@@ -14,25 +14,25 @@ namespace PSI_Project_Perso
             get { return contientCycle; }
         }
 
-        public Graphe(List<(int, int)> edges)
+        public Graphe(List<(int, int)> arc)
         {
             int nbNoeuds = 0;
-            for (int i = 0; i < edges.Count; i++)
+            for (int i = 0; i < arc.Count; i++)
             {
-                int node1 = edges[i].Item1;
-                int node2 = edges[i].Item2;
+                int noeud1 = arc[i].Item1;
+                int noeud2 = arc[i].Item2;
 
-                if (node1 > nbNoeuds)
+                if (noeud1 > nbNoeuds)
                 {
-                    nbNoeuds = node1;
+                    nbNoeuds = noeud1;
                 }
-                if (node2 > nbNoeuds)
+                if (noeud2 > nbNoeuds)
                 {
-                    nbNoeuds = node2;
+                    nbNoeuds = noeud2;
                 }
             }
 
-            Matrice_Adj = new int[nbNoeuds + 1, nbNoeuds + 1];
+            MatriceAdj = new int[nbNoeuds + 1, nbNoeuds + 1];
             noeuds = new List<Noeud>();
             liens = new List<Lien>();
 
@@ -41,13 +41,13 @@ namespace PSI_Project_Perso
                 noeuds.Add(new Noeud(i));
             }
 
-            for (int i = 0; i < edges.Count; i++)
+            for (int i = 0; i < arc.Count; i++)
             {
-                int noeud1 = edges[i].Item1;
-                int noeud2 = edges[i].Item2;
+                int noeud1 = arc[i].Item1;
+                int noeud2 = arc[i].Item2;
 
-                Matrice_Adj[noeud1, noeud2] = 1;
-                Matrice_Adj[noeud2, noeud1] = 1;
+                MatriceAdj[noeud1, noeud2] = 1;
+                MatriceAdj[noeud2, noeud1] = 1;
 
                 // Relation de voisin
                 noeuds[noeud1].Rajouter(noeud2);
@@ -58,26 +58,34 @@ namespace PSI_Project_Perso
 
         }
 
-        public void PrintAdjMatrix()
+        /// <summary>
+        /// 
+        /// Afficher la matrice d'adjacence
+        /// </summary>
+        public void AfficherMatrice()
         {
             Console.WriteLine("\nMatrice d'adjacence:");
-            for (int i = 1; i < Matrice_Adj.GetLength(0); i++)
+            for (int i = 1; i < MatriceAdj.GetLength(0); i++)
             {
-                for (int j = 1; j < Matrice_Adj.GetLength(1); j++)
+                for (int j = 1; j < MatriceAdj.GetLength(1); j++)
                 {
-                    Console.Write(Matrice_Adj[i, j] + " ");
+                    Console.Write(MatriceAdj[i, j] + " ");
                 }
                 Console.WriteLine();
             }
         }
 
+        /// <summary>
+        /// Tester si la matrice est orientee
+        /// </summary>
+        /// <returns></returns>
         public bool EstNonOriente()
         {
-            for (int i = 1; i < Matrice_Adj.GetLength(0); i++)
+            for (int i = 1; i < MatriceAdj.GetLength(0); i++)
             {
-                for (int j = 1; j < Matrice_Adj.GetLength(1); j++)
+                for (int j = 1; j < MatriceAdj.GetLength(1); j++)
                 {
-                    if (Matrice_Adj[i, j] != Matrice_Adj[j, i])
+                    if (MatriceAdj[i, j] != MatriceAdj[j, i])
                     {
                         return false;
                     }
@@ -86,6 +94,9 @@ namespace PSI_Project_Perso
             return true;
         }
 
+        /// <summary>
+        /// Executer le DFS
+        /// </summary>
         public void DFS_Main()
         {
             int connectedComponents = 0;
@@ -136,6 +147,11 @@ namespace PSI_Project_Perso
             noeud.Couleur = "rouge";
         }
 
+        /// <summary>
+        /// Executer le BFS
+        /// </summary>
+        /// <param name="origine"></param>
+        /// <returns></returns>
         public List<int> BFS(int origine)
         {
             Queue<int> aTraiter = new Queue<int>();
@@ -170,7 +186,7 @@ namespace PSI_Project_Perso
             return bfsOrder;
         }
 
-        public void PrintBFSOrder(List<int> bfsOrder)
+        public void AfficherBFSOrder(List<int> bfsOrder)
         {
             Console.Write("\nOrdre de visite (BFS) : " + string.Join(" -> ", bfsOrder));
             Console.WriteLine();

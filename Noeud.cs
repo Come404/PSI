@@ -6,9 +6,9 @@ namespace PSI_Project_Perso
         public int Id;
         public List<int> Voisins;
         public string Couleur;   // "blanc", "jaune", "rouge"
-        public int? Pred;        // 前驱节点
-        public int DateDec;      // 发现时间
-        public int DateFin;      // 完成时间
+        public int? Pred;        // peut-etre null
+        public int DateDec;      
+        public int DateFin;      
 
         public Noeud(int id)
         {
